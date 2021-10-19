@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<table>
+	<tr>
+        <th>이름</th>
+		<th>나이</th>
+        <th>생년월일</th>
+		<th>전화번호</th>
+	</tr>
+
+		<tr>
+			<td>{{user}}</td>
+			<td>{{data.age}}</td>
+			<td>{{data.birth}}</td>
+			<td>{{data.phone}}</td>
+		</tr>
+
+
+</table>
+</body>
+</html>
+
+
+<!--GET, POST-->
+
+<!--HTTP 주요 메서드 종류-->
+<!--*GET:리소스 조회-->
+<!--GET 방식으로 서버에 전달할때는 보통 request-line과 헤더 부분만 이용한다.body는 거의사용하지 않는다.-->
+
+<!--*POST : 요청 데이터 처리, 주로 등록에 사용-->
+<!--POST 방식은 메시지 body를 통하여 서버로 요청 데이터를 전달할 수 있다.메시지 body를 통하여 데이터를 전달받은 서버가 데이터를 처리하게된다.-->
+<!--주된 전달 데이터로는 신규 등록하는 리소스, 프로세스 처리에 사용된다.-->
+
+<!--ex)-->
+<!--1>회원가입, 주문 창-->
+<!--2>게시판 글쓰기, 댓글달기-->
+<!--3>신규 주문-->
+<!--4>기존 데이터에 데이터 추가하기-->
+
+<!--*PUT-->
+<!--기존의 리소스가 있다면 기존 리소스를 완전하게 대체하는 방식-->
+<!--리소스가 없었다면 새로 생성해주지만, 만약 있다면 덮어씌워 버림-->
+<!--클라이언트가 리소스의 위치를 알고 URI를 지정해야함-->
+
+
